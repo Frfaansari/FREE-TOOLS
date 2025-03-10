@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to PNG Converter - MultiTools Hub</title>
+    <meta name="description" content="Convert your images to PNG format with customizable settings. Free online tool for image conversion.">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Header will be dynamically loaded -->
+    <div id="header-placeholder"></div>
+
+    <!-- Tool Content -->
+    <main class="tool-content py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Main Tool Section -->
+                <div class="col-lg-8">
+                    <div class="tool-container">
+                        <h1 class="mb-4">Image to PNG Converter</h1>
+                        <p class="lead mb-4">Convert your images to PNG format with customizable settings. Supports JPG, JPEG, GIF, BMP, and more.</p>
+                        
+                        <!-- Tool Interface -->
+                        <div class="tool-interface">
+                            <div class="upload-area mb-4">
+                                <div class="upload-box" id="uploadBox">
+                                    <i class="fas fa-cloud-upload-alt fa-3x mb-3"></i>
+                                    <h3>Drag & Drop or Click to Upload</h3>
+                                    <p class="text-muted">Supported formats: JPG, JPEG, GIF, BMP, WebP</p>
+                                    <input type="file" id="fileInput" accept="image/*" class="d-none">
+                                </div>
+                            </div>
+
+                            <!-- Conversion Options -->
+                            <div class="conversion-options mb-4">
+                                <h4>Conversion Options</h4>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group mb-3">
+                                            <label for="quality">Quality</label>
+                                            <input type="range" class="form-range" id="quality" min="0" max="100" value="90">
+                                            <div class="d-flex justify-content-between">
+                                                <small>Low</small>
+                                                <small>High</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group mb-3">
+                                            <label for="transparency">Transparency</label>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="transparency" checked>
+                                                <label class="form-check-label" for="transparency">
+                                                    Preserve transparency
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Preview Section -->
+                            <div class="preview-section mb-4">
+                                <h4>Preview</h4>
+                                <div class="preview-container">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="preview-box">
+                                                <h5>Original</h5>
+                                                <div id="originalPreview" class="preview-image"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="preview-box">
+                                                <h5>Converted</h5>
+                                                <div id="convertedPreview" class="preview-image"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Action Buttons -->
+                            <div class="action-buttons">
+                                <button class="btn btn-primary" id="convertBtn" disabled>
+                                    <i class="fas fa-sync-alt me-2"></i>Convert to PNG
+                                </button>
+                                <button class="btn btn-outline-primary" id="downloadBtn" disabled>
+                                    <i class="fas fa-download me-2"></i>Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <!-- Ad Space -->
+                    <div class="ad-space mb-4">
+                        <!-- Ad content will be loaded dynamically -->
+                    </div>
+
+                    <!-- Related Tools -->
+                    <div class="related-tools">
+                        <h4>Related Tools</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <a href="image-to-jpg.html" class="text-decoration-none">
+                                    <i class="fas fa-file-image me-2"></i>Image to JPG Converter
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="image-resizer.html" class="text-decoration-none">
+                                    <i class="fas fa-expand-arrows-alt me-2"></i>Image Resizer
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="image-compressor.html" class="text-decoration-none">
+                                    <i class="fas fa-compress-arrows-alt me-2"></i>Image Compressor
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Tool Information -->
+                    <div class="tool-info mt-4">
+                        <h4>About This Tool</h4>
+                        <p>Convert your images to PNG format with our free online converter. PNG format is perfect for images that require transparency or high quality.</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>Free to use</li>
+                            <li><i class="fas fa-check text-success me-2"></i>No registration required</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Secure conversion</li>
+                            <li><i class="fas fa-check text-success me-2"></i>High-quality output</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer will be dynamically loaded -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/config.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/tools/image-to-png.js"></script>
+</body>
+</html> 
